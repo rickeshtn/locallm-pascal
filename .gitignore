@@ -1,0 +1,12 @@
+# Model cache
+model_cache/
+
+# Output files
+conversations/
+logs/
+outputs/
+
+# System files
+.DS_Store
+*.log
+*.tmp
