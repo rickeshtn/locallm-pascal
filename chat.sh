@@ -16,7 +16,7 @@ docker run -it --rm \
   --ulimit memlock=-1 --ulimit stack=268435456 \
   -v $(pwd):/workspace \
   -e HF_HOME=/workspace/model_cache \
-  rickeshtn/large-model-international:latest \
-  python /workspace/interactive_chat.py \
+  rickeshtn/large-model-international_release:latest \
+  python /app/interactive_chat.py \
   --model-name "$MODEL" \
   --max-tokens "$MAX_TOKENS"

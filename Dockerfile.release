@@ -1,0 +1,30 @@
+FROM nvcr.io/nvidia/pytorch:22.08-py3
+
+WORKDIR /app
+
+# Environment variables
+ENV PIP_NO_CACHE_DIR=1 \
+    NCCL_IB_DISABLE=1 \
+    PYTHONPATH=/app:$PYTHONPATH \
+    HF_HOME=/workspace/model_cache
+
+# Install Python dependencies
+RUN pip install --upgrade pip && \
+    pip install transformers==4.45.0 \
+                accelerate>=0.26.0 \
+                peft==0.7.0 \
+                bitsandbytes==0.41.1 \
+                safetensors>=0.4.0 \
+                huggingface-hub>=0.23.2 \
+                "tokenizers>=0.20.0,<0.21.0" \
+                sentencepiece>=0.1.97
+
+# Copy Python scripts into the image
+COPY interactive_chat.py /app/
+COPY test_with_logging.py /app/
+COPY resource_logger.py /app/
+
+# Set working directory to /workspace (where user mounts their data)
+WORKDIR /workspace
+
+CMD ["/bin/bash"]

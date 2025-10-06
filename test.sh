@@ -16,8 +16,8 @@ docker run --rm \
   --ulimit memlock=-1 --ulimit stack=268435456 \
   -v $(pwd):/workspace \
   -e HF_HOME=/workspace/model_cache \
-  rickeshtn/large-model-international:latest \
-  python /workspace/test_with_logging.py \
+  rickeshtn/large-model-international_release:latest \
+  python /app/test_with_logging.py \
   --model-name "$MODEL" \
   --prompt "$PROMPT" \
   --max-tokens 200

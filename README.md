@@ -14,7 +14,7 @@ Run large language models (up to 35B parameters) on dual Pascal GPUs with CPU me
 
 ### Pull Docker Image
 ```bash
-docker pull rickeshtn/large-model-international:latest
+docker pull rickeshtn/large-model-international_release:latest
 ```
 
 ## 💬 Interactive Chat Mode
@@ -25,8 +25,8 @@ docker run -it --rm --runtime=nvidia --gpus all --ipc=host \
   --ulimit memlock=-1 --ulimit stack=268435456 \
   -v $(pwd):/workspace \
   -e HF_HOME=/workspace/model_cache \
-  rickeshtn/large-model-international:latest \
-  python /workspace/interactive_chat.py \
+  rickeshtn/large-model-international_release:latest \
+  python /app/interactive_chat.py \
   --model-name Qwen/Qwen2.5-14B-Instruct \
   --max-tokens 512
 ```
@@ -37,8 +37,8 @@ docker run -it --rm --runtime=nvidia --gpus all --ipc=host \
   --ulimit memlock=-1 --ulimit stack=268435456 \
   -v $(pwd):/workspace \
   -e HF_HOME=/workspace/model_cache \
-  rickeshtn/large-model-international:latest \
-  python /workspace/interactive_chat.py \
+  rickeshtn/large-model-international_release:latest \
+  python /app/interactive_chat.py \
   --model-name facebook/opt-30b \
   --max-tokens 512
 ```
@@ -49,8 +49,8 @@ docker run -it --rm --runtime=nvidia --gpus all --ipc=host \
   --ulimit memlock=-1 --ulimit stack=268435456 \
   -v $(pwd):/workspace \
   -e HF_HOME=/workspace/model_cache \
-  rickeshtn/large-model-international:latest \
-  python /workspace/interactive_chat.py \
+  rickeshtn/large-model-international_release:latest \
+  python /app/interactive_chat.py \
   --model-name codellama/CodeLlama-34b-Instruct-hf \
   --max-tokens 512
 ```
@@ -77,8 +77,8 @@ docker run --rm --runtime=nvidia --gpus all --ipc=host \
   --ulimit memlock=-1 --ulimit stack=268435456 \
   -v $(pwd):/workspace \
   -e HF_HOME=/workspace/model_cache \
-  rickeshtn/large-model-international:latest \
-  python /workspace/test_with_logging.py \
+  rickeshtn/large-model-international_release:latest \
+  python /app/test_with_logging.py \
   --model-name Qwen/Qwen2.5-14B-Instruct \
   --prompt "Explain quantum computing" \
   --max-tokens 200
@@ -92,8 +92,8 @@ docker run --rm --runtime=nvidia --gpus all --ipc=host \
   --ulimit memlock=-1 --ulimit stack=268435456 \
   -v $(pwd):/workspace \
   -e HF_HOME=/workspace/model_cache \
-  rickeshtn/large-model-international:latest \
-  python /workspace/test_with_logging.py \
+  rickeshtn/large-model-international_release:latest \
+  python /app/test_with_logging.py \
   --model-name Qwen/Qwen2.5-14B-Instruct \
   --prompt "What is artificial intelligence?" \
   --max-tokens 200
@@ -105,8 +105,8 @@ docker run --rm --runtime=nvidia --gpus all --ipc=host \
   --ulimit memlock=-1 --ulimit stack=268435456 \
   -v $(pwd):/workspace \
   -e HF_HOME=/workspace/model_cache \
-  rickeshtn/large-model-international:latest \
-  python /workspace/test_with_logging.py \
+  rickeshtn/large-model-international_release:latest \
+  python /app/test_with_logging.py \
   --model-name facebook/opt-30b \
   --prompt "Explain machine learning in simple terms" \
   --max-tokens 200
@@ -118,8 +118,8 @@ docker run --rm --runtime=nvidia --gpus all --ipc=host \
   --ulimit memlock=-1 --ulimit stack=268435456 \
   -v $(pwd):/workspace \
   -e HF_HOME=/workspace/model_cache \
-  rickeshtn/large-model-international:latest \
-  python /workspace/test_with_logging.py \
+  rickeshtn/large-model-international_release:latest \
+  python /app/test_with_logging.py \
   --model-name codellama/CodeLlama-34b-Instruct-hf \
   --prompt "Write a Python function to sort a list" \
   --max-tokens 200
@@ -135,8 +135,8 @@ docker run -it --rm --runtime=nvidia --gpus all --ipc=host \
   -v $(pwd):/workspace \
   -v /path/to/external/drive:/models \
   -e HF_HOME=/models \
-  rickeshtn/large-model-international:latest \
-  python /workspace/interactive_chat.py \
+  rickeshtn/large-model-international_release:latest \
+  python /app/interactive_chat.py \
   --model-name Qwen/Qwen2.5-14B-Instruct
 ```
 

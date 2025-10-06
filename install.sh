@@ -41,7 +41,7 @@ echo "💾 Available disk space: ${FREE_SPACE}GB"
 
 echo ""
 echo "📥 Pulling Docker image..."
-docker pull rickeshtn/large-model-international:latest
+docker pull rickeshtn/large-model-international_release:latest
 
 echo ""
 echo "✅ Installation complete!"
