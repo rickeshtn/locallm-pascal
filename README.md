@@ -14,6 +14,30 @@
   - ✅ **Docker one-liner** - no coding required
   - ✅ **Verified models**: Qwen-14B (13.7 tok/s), OPT-30B (5.4 tok/s), CodeLlama-34B
 
+#AI #MachineLearning #LLM #OpenSource #DeepLearning #ChatGPT
+
+  ## 📄 GitHub Topics/Tags
+
+  Add these to your GitHub repo:
+  llm
+  qlora
+  pascal-gpu
+  multi-gpu
+  docker
+  inference
+  transformers
+  large-language-models
+  gpu-optimization
+  memory-efficient
+  local-llm
+  quantization
+  qwen
+  opt
+  codellama
+  interactive-chat
+  chatbot
+  conversational-ai
+  
   ### ⚡ For the Impatient
   ```bash
   # Pull and run in 2 commands
@@ -32,3 +56,4 @@
   ./chat.sh  # Start interactive chat with Qwen-14B
 
   Hardware: Pascal GPUs (P100, GTX 1080 Ti, etc.) • 16GB+ VRAM • 32GB+ RAM
+
